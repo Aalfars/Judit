@@ -25,13 +25,27 @@
     <link rel="icon" type="image/png" sizes="16x16" href="16.png">
     <link rel="manifest" href="site.webmanifest">
     <style>
+        /* Default untuk tampilan desktop */
         .s-about__content {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-wrap: nowrap; 
             align-items: flex-start;
+            gap: 20px;
         }
         
+        .s-about__image {
+            flex: 0 0 30%;
+            max-width: 30%;
+        }
+        
+        .s-about__text {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        /* Gambar styling */
         .s-about__image img {
             max-width: 100%;
             height: auto;
@@ -39,37 +53,35 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
-        .s-about__text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        /* Responsif */
+        /* Responsif untuk perangkat mobile */
         @media (max-width: 768px) {
             .s-about__content {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center;
             }
         
             .s-about__image {
-                margin-bottom: 20px;
+                max-width: 100%; 
+                margin-bottom: 20px; 
             }
-             .s-about__text {
-             text-align: justify;
-    }
+        
+            .s-about__text {
+                text-align: justify; 
+            }
         }
         
         @media (max-width: 480px) {
             .attention-getter {
-                font-size: 14px;
+                font-size: 14px; 
                 line-height: 1.6;
             }
         
             .text-display-title {
-                font-size: 20px;
+                font-size: 20px; 
             }
         }
+        
 
     </style>
 
