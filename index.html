@@ -24,6 +24,57 @@
     <link rel="icon" type="image/png" sizes="32x32" href="32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="16.png">
     <link rel="manifest" href="site.webmanifest">
+    <style>
+            /* Umum */
+    .s-about__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .s-about__image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .s-about__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* Responsif */
+    @media (max-width: 768px) {
+        .s-about__content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .s-about__image {
+            margin-bottom: 20px;
+        }
+    
+        .s-about__text {
+            text-align: justify;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .attention-getter {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    
+        .text-display-title {
+            font-size: 20px;
+        }
+    }
+
+    </style>
 
 </head>
 
