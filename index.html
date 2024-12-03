@@ -100,6 +100,58 @@
             }
         }
 
+        .folio-entries {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+    
+        .entry {
+            width: calc(33.333% - 20px);
+            margin-bottom: 20px;
+            position: relative;
+        }
+    
+        .entry__thumb img {
+            width: 100%; /* Memastikan gambar memenuhi lebar kontainer */
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+    
+        /* Responsif untuk perangkat mobile */
+        @media (max-width: 768px) {
+            .folio-entries {
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Dua kolom di mobile */
+                gap: 15px;
+            }
+    
+            .entry {
+                width: 100%; /* Membuat setiap entry menggunakan 100% lebar pada mobile */
+            }
+    
+            .entry__thumb img {
+                max-width: 100%;
+                height: auto;
+            }
+    
+            .entry__info {
+                text-align: center;
+            }
+        }
+    
+        /* Responsif untuk perangkat kecil (smartphone) */
+        @media (max-width: 480px) {
+            .folio-entries {
+                grid-template-columns: 1fr; /* Satu kolom di smartphone */
+            }
+    
+            .entry__info {
+                padding: 10px;
+            }
+        }
+
     </style>
 
 </head>
